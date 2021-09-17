@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Mon Sep 13 2021 16:28:46 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Sep 17 2021 01:10:18 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="612fc881a2b0616b0c046194" data-wf-site="60ac068a5aed0883035c0e97" lang="en">
 <head>
   <meta charset="utf-8">
@@ -163,7 +163,7 @@
           <div class="next-p">Next up</div>
         </div>
       </div>
-      <div class="next-wrapper"><img src="../images/Laureate-Home.png" loading="lazy" alt="" sizes="100vw" srcset="../images/Laureate-Home-p-500.png 500w, ../images/Laureate-Home-p-800.png 800w, ../images/Laureate-Home-p-1080.png 1080w, ../images/Laureate-Home-p-1600.png 1600w, ../images/Laureate-Home-p-2000.png 2000w" class="next-image"></div>
+      <div class="next-wrapper"><img src="../images/Laureate-Home2.png" loading="lazy" alt="" sizes="100vw" srcset="../images/Laureate-Home2-p-500.png 500w, ../images/Laureate-Home2-p-800.png 800w, ../images/Laureate-Home2-p-1080.png 1080w, ../images/Laureate-Home2-p-1600.png 1600w, ../images/Laureate-Home2-p-2000.png 2000w" class="next-image"></div>
     </a>
   </div>
   <header id="hero-overlay" style="display:flex" class="page-transition wf-section">
@@ -246,6 +246,13 @@
 $(window).on('beforeunload', function() {
   $('body').hide();
   $(window).scrollTop(0);
+});
+</script>
+  <script>
+$(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload() 
+    }
 });
 </script>
 </body>
